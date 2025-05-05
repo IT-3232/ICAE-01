@@ -14,7 +14,5 @@ public class Student extends Person {
     private List<FoodOrder> foodOrders;
 
     
-
-    
 }
 
