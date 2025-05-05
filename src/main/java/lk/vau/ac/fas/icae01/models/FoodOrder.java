@@ -6,6 +6,8 @@ import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class FoodOrder {
@@ -14,7 +16,9 @@ public class FoodOrder {
 
     private LocalDate orderDate;
 
-  
+    @ManyToOne
+    @JoinColumn(name = "student_id")
+    private Student student;
 
     
 }
