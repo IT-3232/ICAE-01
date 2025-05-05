@@ -3,8 +3,11 @@ package lk.vau.ac.fas.icae01.models;
 
 
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 
 
 @Entity
@@ -17,7 +20,8 @@ public class FoodItem {
     private double price;
     private double weight;
 
-    
+    @ManyToMany(mappedBy = "foodItems")
+    private List<DailyMenu> dailyMenus;
 
    
 }
